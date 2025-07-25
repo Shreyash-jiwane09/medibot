@@ -1,1 +1,8 @@
-EURI_API_KEY="euri-1370a6e6f3c851ecfe475d25bf64e2ca68445f15601ffa34b5a7d5e4a8efd5db"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Make sure this is called only once
+
+EURI_API_KEY = os.getenv("EURI_API_KEY")
+if not EURI_API_KEY:
+    raise ValueError("EURI_API_KEY environment variable is not set.")
