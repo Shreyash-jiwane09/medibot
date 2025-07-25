@@ -123,7 +123,7 @@ with st.sidebar:
                 st.session_state.vectorstore = vectorstore
                 
                 # Initialize chat model
-                chat_model = get_chat_model(EURI_API_KEY)
+                chat_model = get_chat_model()
                 st.session_state.chat_model = chat_model
                 
                 st.success("✅ Documents processed successfully!")
